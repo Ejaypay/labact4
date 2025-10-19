@@ -26,8 +26,18 @@ class MainActivity2 : AppCompatActivity() {
 
         // Access the Button using findViewById
         val btnGetStarted: Button = findViewById(id.btnGetStarted)
+        val viewAllButton2: Button = findViewById(id.viewAllButton2)
+        val viewAllButton3: Button = findViewById(id.viewAllButton3)
 
-        // Set a click listener for the button
+        // Set a click listener for the viewAllButton2
+        viewAllButton2.setOnClickListener {
+            // Handle the "View All" button click action here
+        }
+        viewAllButton3.setOnClickListener {
+            // Handle click for viewAllButton3
+        }
+
+        // Set a click listener for the Get Started button
         btnGetStarted.setOnClickListener {
             // Navigate to MainActivity (not MainActivity2 to avoid infinite loop)
             val intent = Intent(this, MainActivity2::class.java)
