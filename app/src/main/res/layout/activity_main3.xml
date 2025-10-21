@@ -182,35 +182,37 @@
             </HorizontalScrollView>
 
             <!-- Flash Sale CardView -->
+
+            <!-- Shop by Platform Section -->
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+                android:layout_margin="10dp"
                 android:backgroundTint="#F73394"
-                app:cardCornerRadius="15dp"
-                android:layout_margin="10dp">
+                app:cardCornerRadius="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="monospace"
                     android:text="Flash Sale - Limited Sale!"
                     android:textColor="@color/white"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="monospace"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="70dp"
                     android:text="Up to 50% off on selected pet Essentials"
                     android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="70dp" />
+                    android:textSize="15sp" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Shop by Platform Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -326,24 +328,24 @@
                 <!-- Card for Trending Product -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_height="400dp">
+                    android:layout_height="400dp"
+                    app:cardCornerRadius="15dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="45dp"
                         android:layout_height="15dp"
-                        app:cardCornerRadius="10dp"
+                        android:layout_marginLeft="20dp"
                         android:layout_marginTop="300dp"
                         android:backgroundTint="#F0B100"
-                        android:layout_marginLeft="20dp">
+                        app:cardCornerRadius="10dp">
 
                         <TextView
                             android:layout_width="25dp"
                             android:layout_height="15dp"
-                            android:text="Grain Free"
-                            android:textColor="@color/black"
                             android:layout_marginLeft="9dp"
                             android:layout_marginTop="3dp"
+                            android:text="Grain Free"
+                            android:textColor="@color/black"
                             android:textSize="5sp"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
@@ -351,27 +353,27 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="50dp"
                         android:layout_height="20dp"
-                        app:cardCornerRadius="10dp"
+                        android:layout_marginLeft="20dp"
                         android:layout_marginTop="320dp"
                         android:backgroundTint="#F0B100"
-                        android:layout_marginLeft="20dp">
+                        app:cardCornerRadius="10dp">
 
                         <TextView
                             android:layout_width="25dp"
                             android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Protein"
                             android:textColor="@color/black"
-                            android:layout_marginLeft="10dp"
                             android:textSize="7sp"
-                            android:layout_marginTop="5dp"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
 
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="120dp"
-                        android:src="@drawable/dogfud"
-                        android:layout_marginTop="-10dp" />
+                        android:layout_marginTop="-10dp"
+                        android:src="@drawable/dogfud" />
 
                     <LinearLayout
                         android:layout_width="150dp"
@@ -381,17 +383,17 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="35dp"
                             android:layout_height="15dp"
-                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
                             android:backgroundTint="#FB2C36"
-                            android:layout_marginLeft="20dp">
+                            app:cardCornerRadius="10dp">
 
                             <TextView
                                 android:layout_width="25dp"
                                 android:layout_height="15dp"
+                                android:layout_marginLeft="6dp"
                                 android:text="-25%"
                                 android:textColor="@color/white"
-                                android:layout_marginLeft="6dp"
                                 android:textSize="10sp"
                                 android:textStyle="bold" />
                         </androidx.cardview.widget.CardView>
@@ -399,17 +401,17 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="45dp"
                             android:layout_height="15dp"
-                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
                             android:backgroundTint="#F0B100"
-                            android:layout_marginLeft="20dp">
+                            app:cardCornerRadius="10dp">
 
                             <TextView
                                 android:layout_width="25dp"
                                 android:layout_height="15dp"
+                                android:layout_marginLeft="9dp"
                                 android:text="Flash"
                                 android:textColor="@color/black"
-                                android:layout_marginLeft="9dp"
                                 android:textSize="10sp"
                                 android:textStyle="bold" />
                         </androidx.cardview.widget.CardView>
@@ -418,42 +420,43 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Premuim Dog Food - Adult Formula"
                         android:layout_marginTop="130dp"
                         android:fontFamily="monospace"
-                        android:textStyle="bold"
+                        android:text="Premuim Dog Food - Adult Formula"
                         android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="$32.99"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="180dp"
                         android:fontFamily="monospace"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="bold"
+                        android:text="$32.99"
                         android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="829 sold • 45 in stock"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="200dp"
                         android:fontFamily="monospace"
-                        android:layout_marginLeft="10dp"
+                        android:text="829 sold • 45 in stock"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="80dp"
                         android:layout_height="30dp"
-                        android:layout_marginTop="250dp"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="250dp"
                         android:text="Buy Now"
                         android:textSize="8dp" />
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="15dp"
@@ -590,44 +593,16 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:gravity="center"
-        android:padding="16dp">
-
-        <!-- Heart Icon -->
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/heart"
-            android:layout_weight="1"/>
-
-        <!-- Market Icon -->
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/market"
-            android:layout_weight="1"/>
-
-        <!-- Settings Icon -->
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/setting1"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/user"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        android:background="@android:color/white"
+        app:menu="@menu/bottom_navigation_menu"
+        android:layout_alignParentBottom="true" />
 
 
 </RelativeLayout>

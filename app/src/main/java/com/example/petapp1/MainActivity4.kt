@@ -9,11 +9,11 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.petapp1.R.id
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity3 : AppCompatActivity() {
+class MainActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge() // Enable edge-to-edge content for this activity
-        setContentView(R.layout.activity_main3)
+        setContentView(R.layout.activity_main4)
 
         // Ensure system bars (status bar, navigation bar) don't overlap the content
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(id.main)) { v, insets ->
@@ -36,11 +36,11 @@ class MainActivity3 : AppCompatActivity() {
                     true
                 }
                 R.id.nav_marketplace -> {
+                    // Navigate to MainActivity4 (not MainActivity3, avoid infinite loop)
+                    startActivity(Intent(this, MainActivity3::class.java))
                     true
                 }
                 R.id.nav_settings -> {
-                    // Navigate to MainActivity5
-                    startActivity(Intent(this, MainActivity4::class.java))
                     true
                 }
                 R.id.nav_gallery -> {

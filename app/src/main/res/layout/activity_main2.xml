@@ -9,10 +9,11 @@
 
     <!-- Main ScrollView to hold all content -->
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:layout_above="@id/bottom_navigation">
 
         <LinearLayout
             android:id="@+id/main_content"
@@ -26,7 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="30dp">
@@ -57,11 +59,14 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- Purple Welcome Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:layout_marginHorizontal="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:cardUseCompatPadding="true"
                 app:cardBackgroundColor="#9620FB"
                 app:cardCornerRadius="30dp"
                 app:cardElevation="4dp">
@@ -128,6 +133,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="16dp"
+                    app:cardUseCompatPadding="true"
                     app:cardBackgroundColor="#ed6605"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
@@ -160,6 +166,7 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    app:cardUseCompatPadding="true"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
@@ -193,8 +200,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
                 android:gravity="center_vertical">
 
                 <TextView
@@ -219,7 +227,7 @@
                     app:strokeWidth="1dp" />
             </LinearLayout>
 
-            <!-- Recently Viewed Pets (Scrollable if more added) -->
+            <!-- Recently Viewed Pets -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -241,7 +249,6 @@
                         android:padding="16dp"
                         android:gravity="center_vertical">
 
-                        <!-- Pet Image (simplified from nested CardView) -->
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
@@ -250,7 +257,6 @@
                             android:scaleType="centerCrop"
                             android:src="@drawable/doggy" />
 
-                        <!-- Pet Details -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -279,7 +285,6 @@
                                 android:text="Happy Trails Shelter • 2.3 miles" />
                         </LinearLayout>
 
-                        <!-- Heart Icon -->
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -301,7 +306,6 @@
                         android:padding="16dp"
                         android:gravity="center_vertical">
 
-                        <!-- Pet Image -->
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
@@ -310,7 +314,6 @@
                             android:scaleType="centerCrop"
                             android:src="@drawable/catty" />
 
-                        <!-- Pet Details -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -339,7 +342,6 @@
                                 android:text="City Animal Rescue • 1.8 miles" />
                         </LinearLayout>
 
-                        <!-- Heart Icon -->
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -348,12 +350,14 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
+            <!-- Upcoming Events header -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
                 android:gravity="center_vertical">
 
                 <TextView
@@ -378,6 +382,7 @@
                     app:strokeWidth="1dp" />
             </LinearLayout>
 
+            <!-- Upcoming Event 1 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -392,7 +397,6 @@
                     android:padding="16dp"
                     android:gravity="center_vertical">
 
-                    <!-- Pet Details -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -421,7 +425,6 @@
                             android:text="Central Park" />
                     </LinearLayout>
 
-                    <!-- Heart Icon -->
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
@@ -429,6 +432,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Upcoming Event 2 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -443,7 +447,6 @@
                     android:padding="16dp"
                     android:gravity="center_vertical">
 
-                    <!-- Pet Details -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -472,7 +475,6 @@
                             android:text="Community Center" />
                     </LinearLayout>
 
-                    <!-- Heart Icon -->
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
@@ -480,40 +482,19 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-        </LinearLayout>  <!-- Closing main_content LinearLayout -->
+        </LinearLayout>
     </ScrollView>
 
-    <!-- Fixed Bottom Navigation Bar -->
-    <LinearLayout
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:gravity="center"
-        android:padding="16dp">
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        android:background="@android:color/white"
+        app:menu="@menu/bottom_navigation_menu"
+        android:layout_alignParentBottom="true" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/heart"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/market"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/setting1"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/user"
-            android:layout_weight="1"/>
+</RelativeLayout>

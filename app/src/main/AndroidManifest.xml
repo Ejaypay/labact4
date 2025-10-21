@@ -12,9 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         <activity
-            android:name=".MainActivity4"
+            android:name=".MainActivity5"
             android:exported="false" />
-        <!-- Define MainActivity3 (no need for intent-filter) -->
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" /> <!-- Define MainActivity3 (no need for intent-filter) -->
         <activity
             android:name=".MainActivity3"
             android:exported="false" /> <!-- MainActivity as the launcher activity -->

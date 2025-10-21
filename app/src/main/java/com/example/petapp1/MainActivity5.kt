@@ -9,43 +9,43 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.petapp1.R.id
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity3 : AppCompatActivity() {
+class MainActivity5 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge() // Enable edge-to-edge content for this activity
-        setContentView(R.layout.activity_main3)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main5)
 
-        // Ensure system bars (status bar, navigation bar) don't overlap the content
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(id.main)) { v, insets ->
+        // Set window insets to ensure the system bars (status and navigation bars) do not overlap content
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Initialize BottomNavigationView
+        // Initialize BottomNavigationView after setting the content view
         val bottomNavigationView: BottomNavigationView = findViewById(id.bottom_navigation)
 
-        // Set default selected item (you can set any default as per your requirement)
+        // Set default selected item
         bottomNavigationView.selectedItemId = R.id.nav_home
 
         // Set the click listener for navigation items
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    startActivity(Intent(this, MainActivity2::class.java))
+                    // If already on MainActivity5, do nothing
                     true
                 }
                 R.id.nav_marketplace -> {
+                    // Navigate to MainActivity3 (avoid navigating to MainActivity5 again)
+                    startActivity(Intent(this, MainActivity3::class.java))
                     true
                 }
                 R.id.nav_settings -> {
-                    // Navigate to MainActivity5
-                    startActivity(Intent(this, MainActivity4::class.java))
+                    // If already on MainActivity5, do nothing
                     true
                 }
                 R.id.nav_gallery -> {
-                    // Navigate to another activity (MainActivity6 as an example)
-                    startActivity(Intent(this, MainActivity5::class.java))
+                    // If already on MainActivity5, do nothing
                     true
                 }
                 else -> false
